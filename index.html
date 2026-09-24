@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101833" />
+    <meta name="description" content="来月下游园会接月饼、收好运，带走一句中秋祝福。" />
+    <title>月下游园会 · 中秋快乐</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="月下游园会，返回顶部">
+          <span class="brand-mark" aria-hidden="true">☾</span>
+          <span>月下游园会</span>
+        </a>
+        <span class="header-note"><span class="note-star" aria-hidden="true">✦</span> 八月十五 · 月亮营业中</span>
+      </header>
+
+      <main id="top" class="main-layout">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> 今晚限时开放</div>
+          <h1 id="page-title">月圆了，<br /><em>来接点好运。</em></h1>
+          <p class="intro-copy">月饼从天上掉下来啦。左右移动小篮子，接住甜甜的中秋好运。</p>
+
+          <div class="how-to-play" aria-label="游戏规则">
+            <div class="rule"><span class="rule-icon regular-icon" aria-hidden="true">福</span><span>月饼 <strong>+10</strong></span></div>
+            <div class="rule"><span class="rule-icon golden-icon" aria-hidden="true">月</span><span>金月饼 <strong>+20</strong></span></div>
+            <div class="rule"><span class="rule-icon cloud-icon" aria-hidden="true">☁</span><span>乌云 <strong>−10</strong></span></div>
+          </div>
+
+          <div class="wish-card" id="wish-card">
+            <div class="wish-topline"><span>月光签 · 第 <span id="wish-number">01</span> 号</span><span aria-hidden="true">✧</span></div>
+            <p id="wish-text" class="wish-text">愿你抬头见月，低头有路，身边总有惦念的人。</p>
+            <div class="wish-actions">
+              <button type="button" class="text-button" id="new-wish">再抽一签 <span aria-hidden="true">↗</span></button>
+              <button type="button" class="copy-button" id="copy-wish" aria-label="复制这句祝福">复制祝福</button>
+            </div>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="game-card" aria-labelledby="game-title">
+          <div class="game-head">
+            <div>
+              <p class="game-kicker">MID-AUTUMN MINI GAME</p>
+              <h2 id="game-title">月饼接接乐 <span aria-hidden="true">✷</span></h2>
+            </div>
+            <div class="scoreboard" aria-label="游戏成绩">
+              <div><span>得分</span><strong id="score">0</strong></div>
+              <div><span>最高</span><strong id="best-score">0</strong></div>
+              <div><span>剩余</span><strong><span id="time-left">30</span><small>s</small></strong></div>
+            </div>
+          </div>
+
+          <div class="game-stage" id="game-stage" tabindex="0" aria-label="接月饼游戏区域，用方向键或 A D 键移动篮子">
+            <div class="stage-stars" aria-hidden="true"></div>
+            <div class="moon" aria-hidden="true"><span class="moon-crater moon-crater-one"></span><span class="moon-crater moon-crater-two"></span><span class="moon-crater moon-crater-three"></span></div>
+            <div class="stage-cloud stage-cloud-one" aria-hidden="true"></div>
+            <div class="stage-cloud stage-cloud-two" aria-hidden="true"></div>
+            <div class="stage-hill stage-hill-back" aria-hidden="true"></div>
+            <div class="stage-hill stage-hill-front" aria-hidden="true"></div>
+            <div class="lantern lantern-left" aria-hidden="true"><span></span></div>
+            <div class="lantern lantern-right" aria-hidden="true"><span></span></div>
+            <div id="falling-layer" class="falling-layer" aria-hidden="true"></div>
+            <div id="basket" class="basket" aria-hidden="true"><span class="basket-rim"></span><span class="basket-body">团圆</span></div>
+
+            <div class="game-overlay" id="game-overlay">
+              <div class="overlay-ornament" aria-hidden="true">✦　☾　✦</div>
+              <h3 id="overlay-title">好运，正在路上</h3>
+              <p id="overlay-message">30 秒接住月饼，看看今晚的月亮有多偏爱你。</p>
+              <button type="button" id="start-button" class="primary-button">开始接月饼 <span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+          <div class="game-foot"><span><span class="foot-spark" aria-hidden="true">✦</span> 电脑用 ← → / A D，手机用手指移动</span><span>限时 30 秒</span></div>
+          <p class="sr-only" id="game-announcement" role="status" aria-live="polite"></p>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>愿每一次团圆，都刚刚好。</span><span>Made with moonlight <span aria-hidden="true">☾</span></span></footer>
+    </div>
+  </body>
+</html>
